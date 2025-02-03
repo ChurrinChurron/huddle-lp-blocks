@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import BtnStarted from "./BtnStarted.astro";
+import Logo from "../assets/logo.svg"
+import Mockups from "../assets/illustration-mockups.svg"
+---
+
+<header class="p-8 lg:px-20 lg:py-12">
+	<nav class="flex justify-between items-center mb-24 xl:mx-auto xl:w-[71em]">
+		<Image src={Logo} 
+		alt="Huddle logo"
+		class="md:w-40 lg:w-44 xl:w-52"
+		width={120}
+		height={55}
+		/>
+		<a href="#" class="rounded-full py-1.5 px-7 text-sm font-bold shadow-md bg-white md:text-md md:py-3.5 md:px-16 hover:text-slate-400">Try It Free</a>
+	</nav>
+	<div class="md:flex md:justify-center md:items-start md:gap-x-8">
+		<div class="xl:w-[29em]">
+			<h1 class="text-center text-3xl font-openSansB leading-normal md:text-left lg:text-4xl lg:leading-[1.5em]">Build The Community <br/> Your Fans Will Love</h1>
+			<br/>
+			<h2 class="mx-4 text-center leading-normal md:text-left md:mx-0">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+				Create connections with your users as you engage in genuine discussion.
+			</h2>
+			<BtnStarted isCenter={false}/>
+		</div>
+		<Image src={Mockups} 
+		alt="Mockups illustration"
+		class="max-w-42 mx-auto mt-16 md:mt-0 md:w-96 lg:w-[28em] xl:w-[35em] xl:ml-20 xl:me-0"
+		width={300}
+		height={80}
+		/>
+	</div>
+</header>
+
+<style>
+	header {
+		background: url(../assets/bg-hero-mobile.svg) no-repeat, hsl(193, 100%, 96%);
+		background-size: contain;
+		background-position: center;
+	}
+
+	@media screen and (width >= 768px) {
+		header {
+			background: url(../assets/bg-hero-desktop.svg) no-repeat, hsl(193, 100%, 96%);
+			
+		}
+	}
+</style>

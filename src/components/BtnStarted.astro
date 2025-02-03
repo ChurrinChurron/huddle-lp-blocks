@@ -1,0 +1,7 @@
+---
+const {isCenter} = Astro.props
+---
+
+<button class={`w-72 block mx-auto my-10 py-3.5 rounded-full shadow-md shadow-gray-300 bg-pink text-white text-sm font-bold md:${isCenter ? `mx-auto` : `mx-0`} md:py-5 hover:brightness-125`}>
+	<p class="tracking-wider">Get Started For Free</p>
+</button>
